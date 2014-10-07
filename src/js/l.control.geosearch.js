@@ -12,6 +12,12 @@ L.GeoSearch.Result = function (x, y, label) {
     this.Label = label;
 };
 
+if (trSearchForAddress != undefined){
+  trSearchForAddress = 'search for address ...';
+  trNotFoundMessage = 'Sorry, that address could not be found.';
+}
+
+
 L.Control.GeoSearch = L.Control.extend({
     options: {
         position: 'topcenter',
@@ -20,8 +26,8 @@ L.Control.GeoSearch = L.Control.extend({
 
     _config: {
         country: '',
-        searchLabel: 'search for address ...',
-        notFoundMessage: 'Sorry, that address could not be found.',
+        searchLabel: trSearchForAddress,
+        notFoundMessage: trNotFoundMessage,
         messageHideDelay: 3000,
         zoomLevel: 18
     },

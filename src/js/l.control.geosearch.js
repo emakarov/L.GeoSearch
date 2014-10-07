@@ -12,7 +12,7 @@ L.GeoSearch.Result = function (x, y, label) {
     this.Label = label;
 };
 
-if (trSearchForAddress != undefined){
+if (trSearchForAddress == undefined){
   trSearchForAddress = 'search for address ...';
   trNotFoundMessage = 'Sorry, that address could not be found.';
 }
